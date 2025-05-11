@@ -21,16 +21,12 @@ railway\_passenger\_prediction/
 │
 ├── data/
 │   └── railway\_passengers.csv           # 🚆 3 years of passenger data
-│
 ├── images/
 │   └── prediction\_output.png            # 📷 Saved output image
-│
 ├── utils/
 │   └── data\_preparation.py              # 📊 Data loading and preprocessing
-│
 ├── model/
 │   └── lstm\_model.py                    # 🧠 LSTM model architecture
-│
 ├── train.py                             # 🔁 Training script
 ├── predict.py                           # 📈 Predict and visualize results
 ├── requirements.txt                     # 📦 List of dependencies
@@ -107,7 +103,7 @@ Feel free to modify the `railway_passengers.csv` file in the `data/` folder with
 
 Here is the predicted passenger volume for 2023 based on the trained LSTM model:
 
-![Predicted Railway Passenger Volume](images/prediction_output.png)
+![Predicted Railway Passenger Volume](images/prediction_output.png.png)
 
 ---
 
