@@ -1,0 +1,6 @@
+- Python 3.13.2 or 3.xx.x
+- Libraries:
+  - torch
+  - pandas
+  - matplotlib
+  - scikit-learn
