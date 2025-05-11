@@ -1,135 +1,148 @@
-```
+---
+
 # Railway Passengers Volume Prediction Using LSTM (PyTorch)
 
-This project uses an **LSTM (Long Short-Term Memory) neural network** implemented in **PyTorch** to predict **monthly railway passenger volumes**. The model is trained on historical passenger data from **2020 to 2022**, and then it predicts the passenger volumes for **2023**, capturing seasonal and festival-related spikes.
+This project utilizes an **LSTM (Long Short-Term Memory)** neural network built with **PyTorch** to forecast **monthly railway passenger volumes**. The model is trained on data spanning from **2020 to 2022** and forecasts volumes for **2023**, capturing seasonal and festival-related trends.
 
-## Features
-- Time series forecasting with **LSTM**
-- **PyTorch** implementation (lightweight and efficient)
-- Predicts passenger volume for future months (2023)
-- Data pre-processing, model training, and prediction visualization included
-- Graphical output showing actual vs predicted passenger volumes
+---
 
-## Project Overview
-The LSTM model is trained on monthly railway passenger data from **January 2020 to December 2022**. After training, the model forecasts the railway passenger volumes for **2023**, with predictions that take into account seasonal variations and festival months.
+## 🚀 Features
 
-## Folder Structure
+* Time-series forecasting using **LSTM**
+* Lightweight **PyTorch** implementation
+* Predicts future passenger volumes for 2023
+* Data pre-processing, model training, and visualizations included
+* Graphs illustrating actual vs. predicted values
+
+---
+
+## 📊 Project Overview
+
+The model is trained on monthly railway passenger counts from **Jan 2020 to Dec 2022**. After learning seasonal and event-based patterns, it forecasts monthly volumes for **2023**, aiming to reflect real-world fluctuations like festivals and holidays.
+
+---
+
+## 📁 Folder Structure
 
 ```
-
-railway\_passenger\_prediction/
+railway_passenger_prediction/
 │
 ├── data/
-│   └── railway\_passengers.csv           # 🚆 3 years of passenger data
+│   └── railway_passengers.csv         # 🚆 Historical passenger data (2020–2022)
 ├── images/
-│   └── prediction\_output.png            # 📷 Saved output image
+│   └── prediction_output.png          # 📷 Output visualization
 ├── utils/
-│   └── data\_preparation.py              # 📊 Data loading and preprocessing
+│   └── data_preparation.py            # 📊 Data loading and preprocessing logic
 ├── model/
-│   └── lstm\_model.py                    # 🧠 LSTM model architecture
-├── train.py                             # 🔁 Training script
-├── predict.py                           # 📈 Predict and visualize results
-├── requirements.txt                     # 📦 List of dependencies
-└── README.md                            # 📄 Project documentation
+│   └── lstm_model.py                  # 🧠 LSTM model architecture
+├── train.py                           # 🔁 Model training script
+├── predict.py                         # 📈 Prediction and visualization
+├── requirements.txt                   # 📦 Python dependencies
+└── README.md                          # 📄 Project documentation
+```
 
-````
-## Requirements
+---
 
-- **Python 3.x**
-- Libraries:
-  - `torch`
-  - `pandas`
-  - `matplotlib`
-  - `scikit-learn`
+## 📦 Requirements
 
-You can install the required libraries by running:
+* **Python 3.x**
+* Libraries:
+
+  * `torch`
+  * `pandas`
+  * `matplotlib`
+  * `scikit-learn`
+
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
-## Steps to Run the Project
+---
 
-### 1. Clone the Repository
+## 🧪 How to Run the Project
 
-Start by cloning this repository to your local machine:
+### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/venkatesh1715/railway-passenger-prediction.git
 cd railway-passenger-prediction
 ```
 
-### 2. Install Dependencies
-
-Install the required Python libraries listed in the `requirements.txt`:
+### 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Train the Model
-
-Run the `train.py` script to train the LSTM model on the dataset:
+### 3️⃣ Train the Model
 
 ```bash
 python train.py
 ```
 
-This will train the model on historical data (2020–2022) and save the trained model weights in a file called `lstm_model.pth`.
+> This trains the LSTM model and saves the weights to `lstm_model.pth`.
 
-### 4. Predict Future Passenger Volumes for 2023
-
-Run the `predict.py` script to predict passenger volumes for **2023**:
+### 4️⃣ Predict for 2023
 
 ```bash
 python predict.py
 ```
 
-This script will:
+> Generates predictions for Jan–Dec 2023, plots the results, and saves the graph to `images/prediction_output.png`.
 
-* Generate predictions for the months of **January to December 2023**.
-* Plot a graph comparing actual passenger volumes (2020–2022) and the predicted volumes (2023).
-* Save the generated plot as `prediction_output.png` in the `images/` folder.
+### 5️⃣ View the Output
 
-### 5. View the Output
+Open the generated plot from:
 
-Once you run the script, the plot will be saved in the `images/` folder. You can view it by opening the `prediction_output.png` file.
+```
+images/prediction_output.png
+```
 
-### 6. Customize the Dataset
+### 6️⃣ Customize the Dataset
 
-Feel free to modify the `railway_passengers.csv` file in the `data/` folder with your own data if you wish to experiment with different datasets.
-
-## Predicted Railway Passenger Volume for 2023
-
-Here is the predicted passenger volume for 2023 based on the trained LSTM model:
-
-![Predicted Railway Passenger Volume](images/prediction_output.png.png)
+Update the CSV in `data/railway_passengers.csv` to use your own time-series dataset.
 
 ---
 
-## Project Details
+## 📈 Forecast Output
 
-This model uses **LSTM (Long Short-Term Memory)**, which is a type of **Recurrent Neural Network (RNN)** designed to capture long-term dependencies in sequence data. LSTM is ideal for time-series forecasting tasks, such as predicting monthly railway passenger volumes based on historical data.
+Below is a sample of the predicted monthly railway passenger volumes for 2023:
 
-### Key Concepts:
+![Predicted Railway Passenger Volume](images/prediction_output.png)
 
-* **Time-Series Forecasting**: Predicting future values based on past observations (monthly data).
-* **LSTM (Long Short-Term Memory)**: A type of RNN that excels at learning from sequences and remembering long-term dependencies.
+---
 
-## Potential Applications
+## 🧠 Model Details
 
-* Railway system management and optimization
-* Travel and tourism forecasting
-* Public transportation demand prediction
-* Ticketing and resource allocation based on predicted traffic
+This project leverages **LSTM**, a type of **Recurrent Neural Network (RNN)** that captures temporal patterns and long-term dependencies—ideal for time-series forecasting.
 
-## License
+### Core Concepts:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+* **Time-Series Forecasting**: Predict future values from past sequential data
+* **LSTM (Long Short-Term Memory)**: Advanced RNN for long-range dependency learning
 
-## Acknowledgments
+---
 
-* Thanks to the **PyTorch** team for providing a flexible deep learning framework.
-* Special thanks to the open-source community for their helpful tools and tutorials that made this project possible.
+## 💼 Potential Applications
 
-`
+* Transport system forecasting and planning
+* Demand prediction in public transport
+* Tourism traffic analytics
+* Ticketing system optimization
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full terms.
+
+---
+
+## 🙏 Acknowledgments
+
+* Thanks to the **PyTorch** community for building a robust ML framework.
+* Gratitude to open-source contributors for sharing time-series modeling resources and inspiration.
+
+---
